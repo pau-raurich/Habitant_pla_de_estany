@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/mapa"
+        android:layout_width="match_parent"
+        android:layout_height="280dp"
+        android:layout_marginBottom="30dp">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/pladelestany"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/casella_habitants"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Habitants del pla de l'estany:"
+            android:textSize="15sp"
+            android:textColor="@color/colorBlack"
+            android:layout_gravity="left"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="32.293"
+            android:textSize="15sp"
+            android:textColor="@color/colorBlack"
+            android:gravity="right"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/casella_municipi"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="Seleccioni el municipi:"
+            android:textSize="15sp"
+            android:textColor="@color/colorBlack"
+            android:layout_gravity="left"/>
+
+        <AutoCompleteTextView
+            android:id="@+id/casella_resultat_municipi"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text=""
+            android:textSize="15sp"
+            android:textColor="@color/colorBlack"
+            android:gravity="right"
+            android:completionThreshold="2"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/casella_numhabitants"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="15sp"
+            android:textColor="@color/colorBlack"
+            android:text="Número d'habitants:"
+            android:layout_gravity="left"/>
+
+        <TextView
+            android:id="@+id/casella_resultat_habitants"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text=""
+            android:textSize="15sp"
+            android:textColor="@color/colorBlack"
+            android:textStyle="bold"
+            android:gravity="right"/>
+
+    </LinearLayout>
+    <FrameLayout
+        android:id="@+id/f_layout_button"
+        android:layout_width="match_parent"
+        android:layout_height="70dp">
+
+        <Button
+            android:id="@+id/boto_buscar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Buscar"
+            android:textColor="@color/colorBlack"
+            android:layout_gravity="center"
+            android:backgroundTint="@color/colorSilver" />
+
+    </FrameLayout>
+
+
+
+</LinearLayout>
